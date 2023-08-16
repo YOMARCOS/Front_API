@@ -1,8 +1,8 @@
 
 // redering page
-const container1 = document.getElementById('conteiner1');
-const container2 = document.getElementById('conteiner2');
-function pageCadastro() {
+const container1 = document.getElementById('conteiner1'); // Obtém o container  1
+const container2 = document.getElementById('conteiner2'); // Obtém o container 2
+function pageCadastro() { // Cria a pagina de cadastro
     container1.innerHTML = `
           <form id="cadastro">
             <legend>Cadastro</legend>
@@ -14,7 +14,7 @@ function pageCadastro() {
           <p>Já tem conta? <a  onclick="homePage()">Login</a></p>`;
 }
 
-function homePage() {
+function homePage() {    // Cria a pagina de login
     container1.innerHTML = `
         <form id="login">
             <legend>Login</legend>
@@ -25,31 +25,42 @@ function homePage() {
         <p>Ainda não tem conta? <a onclick="pageCadastro()">Cadastre-se</a></p>`;
 }
 
+//dados de login escopo global
+let dadosLogin={};
 // Função para lidar com o evento de login
-function logar(event) {
+function logar(event) { 
     event.preventDefault();
 
     const form = document.getElementById('login'); // Obtém o formulário de login
     const email = form.mail.value; // Obtém o valor do campo de e-mail
     const senha = form.pass.value; // Obtém o valor do campo de senha
 
-    const dadosLogin = {
+  dadosLogin = {
         email: email,
         senha: senha
-    }; 
-}
- buscarDados(dadosLogin.email, dadosLogin.senha);
-  const per_page = 3;
-  let paginaAtual=1;
+    };
+  buscarDados(dadosLogin)
  
-  function nextPage() {
-    paginaAtual++;
-    buscarDados(dadosLogin.email, dadosLogin.senha);
-  }
 
-function buscarDados(dadosLogin) {
+}
+ function proximo() { 
+    paginaAtual++;
+    container2.innerHTML = ''
+    buscarDados(dadosLogin);
+
+  } 
+  function anterior() { 
+    paginaAtual--;
+    container2.innerHTML = ''
+    buscarDados(dadosLogin);
+
+  }
+  const per_page = 3; // Quantidade de recados
+  let paginaAtual=1;  // Pagina atual
+ 
+function buscarDados(dadosLogin) { // Função para buscar os dados
     // Cria o elemento loader
-    console.log('dadosLogin:', dadosLogin);
+  
     const loader = document.getElementById('loader');
 
     loader.style.display = 'block'
@@ -58,12 +69,10 @@ function buscarDados(dadosLogin) {
      setTimeout(() => {
         // Esconde o loader após um atraso de 2 segundos
         loader.style.display = 'none';
-    }, 10000); // 2000 milissegundos = 2 segundos
-
-    
+    }, 5000); // 2000 milissegundos = 2 segundos
      
  
-    axios.post(`https://api-crudde-recados.onrender.com/users/login?per_page=${per_page}&page=${paginaAtual}`, dadosLogin.email, dadosLogin.senha)
+    axios.post(`https://api-crudde-recados.onrender.com/users/login?per_page=${per_page}&page=${paginaAtual}`, dadosLogin)
         .then(response => {
             //oculta o loader
             loader.style.display = 'none';
@@ -84,10 +93,10 @@ function buscarDados(dadosLogin) {
 
                 // Cria o elemento header e limpa o conteúdo
                 container1.innerHTML = ` 
-                    <button onclick="prevPage()"><</button>
-                    <button onclick="nextPage()">></button>`
+                    <button onclick="anterior()"><</button>
+                    <button onclick="proximo()">></button>`
                 //renderizar lista de recados   
-
+                 
 
                 // Cria a div card
                 const cardDiv = document.createElement('div');
@@ -126,13 +135,3 @@ function buscarDados(dadosLogin) {
         })
     }
 
-// Função para lidar com o evento de cadastro
-function handleCadastro(event) {
-    event.preventDefault();
-
-    const form = document.getElementById('cadastro'); // Obtém o formulário de cadastro
-    const mail = form.mail.value; // Obtém o valor do campo de e-mail
-    const pass = form.pass.value; // Obtém o valor do campo de senha
-
-    console.log(mail, pass);
-}
