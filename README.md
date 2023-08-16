@@ -5,20 +5,31 @@ O Recados App é uma aplicação simples e intuitiva para gerenciar seus recados
 ## Funcionalidades 🚀
 
 ✅ Cadastre-se ou faça login para acessar sua conta.
+
 ✅ Adicione recados com título e descrição.
+
 ✅ Navegue pelos recados de forma fácil com paginação.
+
 ✅ Edite ou exclua recados existentes.
+
 ✅ Interface amigável e responsiva para uso em qualquer dispositivo.
+
 ✅ Loading animado enquanto os recados são carregados.
+
 ✅ Visualização em lista de recados com efeito de card.
+
 ✅ Informações úteis e mensagens de erro intuitivas.
+
 ✅ Design moderno e atraente para uma experiência agradável. 😊
 
 ## Tecnologias Utilizadas 🛠️
 
 🔧 HTML5, CSS3 e JavaScript para a estrutura, estilo e interatividade. 
+
 🔧 Axios para fazer requisições HTTP de forma simples e eficiente. 
+
 🔧 API para gerenciar os recados e as ações do usuário. 
+
 🔧 Animações CSS para tornar a interface mais dinâmica. 
 
 ## Descrição do Projeto 📄
