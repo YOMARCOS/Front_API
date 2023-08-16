@@ -1,0 +1,141 @@
+body {
+    font-family: Verdana;
+  
+    margin: 0;
+    padding: 0;
+    background-color: #101010;
+    color: #fff;
+   
+}
+
+main {
+    max-width: 800px;
+    margin: 2% auto;
+    padding: 20px;
+    background-color: rgba(16, 16, 64, 0.979);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+p{
+padding: 20px;
+}
+a{
+    color: aqua;
+}
+form {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+}
+#alert {
+    padding-left: 20px;
+}
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+}
+
+/*card*/
+.card {
+    background-color: #f9f7e8;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #d4cda5;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #101010;
+  }
+  
+  /* Estilo para o título h3 */
+  .card h3 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+  }
+  
+  /* Estilo para o parágrafo p */
+  .card p {
+    font-size: 1.2em;
+    margin: 0;
+  }
+
+  /*LOADER*/
+/* Estilos para o loader */
+.loader {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .loader-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .loader-animation {
+    width: 80px;
+    height: 80px;
+    position: relative;
+  }
+  
+  .loader-circle {
+    width: 100%;
+    height: 100%;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 2s linear infinite; /* A animação completa em 2 segundos */
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

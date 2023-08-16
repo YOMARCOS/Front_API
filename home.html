@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./src/components/style.css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xRecados</title>
+</head>
+<body>
+    <main id="main">
+        <header><h1>Яecados</h1></header>
+        <div id="conteiner1">
+            <form id="login">
+                <legend>Login</legend>
+                <input type="text" name="email" id="mail" value=""  placeholder="Digite seu e-mail">
+                <input type="password" name="password" id="pass" value=""  placeholder="Digite sua senha">
+                <button type="submit" value="true" onclick="logar(event)">Entrar</button>  
+              </form>
+              <p>Ainda não tem conta? <a onclick="pageCadastro()">Cadastre-se</a></p>
+        </div>
+    
+            <div id="conteiner2">
+               
+            </div>
+            <div id="loader" class="loader">
+                <div class="loader-content">
+                  <div class="loader-animation">
+                    <div class="loader-circle"></div>
+                    
+                  </div>
+                </div>
+              </div>
+    </main>
+    <script src="./src/components/app.js"></script>
+  
+</body>
+
+</html>
