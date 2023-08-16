@@ -47,9 +47,6 @@ function logar(event) {
     buscarDados(dadosLogin.email, dadosLogin.senha);
   }
 
-
-
-
 function buscarDados(dadosLogin) {
     // Cria o elemento loader
     console.log('dadosLogin:', dadosLogin);
