@@ -49,4 +49,17 @@ Não perca mais suas ideias brilhantes, mantenha tudo anotado e nunca mais esque
 ---
 Acesse o projeto do APP Recados em: https://yomarcos.github.io/Front_API/
 
+Lista de usuários para testes da aplicação:
+  
+    senha: "senha1",
+    email: "usuario1@example.com",
+  
+    senha: "senha2",
+    email: "usuario2@example.com",
+ 
+    senha: "senha3",
+    email: "usuario3@example.com",
+   
+
+
 Acesse o projeto da API em: https://github.com/YOMARCOS/Conclusao-backend01
