@@ -47,4 +47,5 @@ O Recados App foi criado com o intuito de simplificar a organização dos seus p
 Não perca mais suas ideias brilhantes, mantenha tudo anotado e nunca mais esqueça suas tarefas importantes! Experimente o Recados App agora mesmo! 💡📋
 
 ---
-Acesse o projeto em: https://yomarcos.github.io/Front_API/
+Acesse o projeto do APP Recados em: https://yomarcos.github.io/Front_API/
+Acesse o projeto da API em: https://github.com/YOMARCOS/Conclusao-backend01
